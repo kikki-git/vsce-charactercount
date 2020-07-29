@@ -13,7 +13,8 @@
     "icon": "images/icon.png",
     "activationEvents": [
         "onLanguage:markdown",
-        "onLanguage:plaintext"
+        "onLanguage:plaintext",
+        "onLanguage:latex"
     ],
     "repository": {
         "type": "git",

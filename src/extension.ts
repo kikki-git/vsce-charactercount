@@ -13,7 +13,7 @@ export class CharacterCounter {
     public updateCharacterCount() {
         if (!this._statusBarItem) {
             this._statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
-        } 
+        }
         let editor = window.activeTextEditor;
         if (!editor) {
             this._statusBarItem.hide();
@@ -22,7 +22,7 @@ export class CharacterCounter {
         let doc = editor.document;
 
         // Markdownとプレーンテキストの時だけカウント
-        if (doc.languageId === "markdown" || doc.languageId === "plaintext") {
+        if (doc.languageId === "markdown" || doc.languageId === "plaintext" || doc.languageId === "latex") {
             let characterCount = this._getCharacterCount(doc);
             this._statusBarItem.text = `$(pencil) ${characterCount} 文字`;
             this._statusBarItem.show();
